@@ -35,9 +35,9 @@ def plot_degradation(df):
     plt.grid()
     st.pyplot(plt)
 
-st.set_page_config(page_title="Ship Part Degradation Analysis", page_icon="🚢", layout="wide")
+st.set_page_config(page_title="Mild Steel Structure Degradation Analysis", layout="wide")
 
-st.title("🚢 Ship Part Degradation Analysis Dashboard")
+st.title("Mild Steel Structure Degradation Analysis Dashboard")
 st.markdown("Upload microscopic images of different stages to analyze degradation over time.")
 
 col1, col2 = st.columns(2)
