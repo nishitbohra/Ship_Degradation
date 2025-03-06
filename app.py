@@ -51,12 +51,12 @@ with col2:
     y5_file = st.file_uploader("Upload 5 Years (5Y) Image", type=["jpg", "png", "jpeg"])
     y5b_file = st.file_uploader("Upload 5 Years Brushed (5YB) Image", type=["jpg", "png", "jpeg"])
 
-if st.button("Analyze Degradation 🚀"):
+if st.button("Analyze Degradation "):
     uploaded_files = [np_file, y1_file, y1b_file, y5_file, y5b_file]
     labels = ["Newly Painted", "1 Year", "1 Year Brushed", "5 Years", "5 Years Brushed"]
     degradation_data = []
 
-    st.subheader("🔍 Analysis Results")
+    st.subheader(" Analysis Results")
     result_cols = st.columns(len(uploaded_files))
     
     for i, file in enumerate(uploaded_files):
@@ -72,7 +72,7 @@ if st.button("Analyze Degradation 🚀"):
                 st.image(processed_image, caption=f"{labels[i]} - Processed", use_container_width=True)
                 st.metric(label=f"{labels[i]} Degradation", value=f"{degradation_percentage:.2f}%")
     
-    st.subheader("📊 Degradation Report")
+    st.subheader(" Degradation Report")
     df = pd.DataFrame(degradation_data)
     st.dataframe(df)
     
@@ -80,5 +80,5 @@ if st.button("Analyze Degradation 🚀"):
     st.download_button("📥 Download Report", csv_file, "degradation_report.csv", "text/csv")
     
     # Automatically show the degradation over time plot
-    st.subheader("📈 Degradation Over Time")
+    st.subheader(" Degradation Over Time")
     plot_degradation(df)
