@@ -77,7 +77,7 @@ if st.button("Analyze Degradation "):
     st.dataframe(df)
     
     csv_file = save_report(degradation_data)
-    st.download_button("📥 Download Report", csv_file, "degradation_report.csv", "text/csv")
+    st.download_button(" Download Report", csv_file, "degradation_report.csv", "text/csv")
     
     # Automatically show the degradation over time plot
     st.subheader(" Degradation Over Time")
